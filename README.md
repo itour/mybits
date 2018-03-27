@@ -29,3 +29,5 @@ public int createUser(UserInfo userInfo){
 }
 
 https://github.com/Activiti/Activiti-Designer/releases
+
+https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-mybatis-xml

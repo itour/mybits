@@ -1,0 +1,12 @@
+```
+SELECT m.no,
+       m.`measure_id`,
+       Group_concat(m.`measure_value` ORDER BY m.`update_time` DESC),
+       Substring_index(Group_concat(m.`measure_value` ORDER BY m.`update_time`
+                       DESC),
+       ',', 1) AS `measure_value`
+FROM   `measure_history_detail` m
+WHERE  m.`create_time` BETWEEN '2019-07-01' AND '2019-08-16'
+GROUP  BY m.`no`,
+          m.`measure_id`
+```
